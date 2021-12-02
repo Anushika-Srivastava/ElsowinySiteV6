@@ -15,6 +15,8 @@ import Services from '../components/services/Services';
 
 import Header from "../components/header/Header";
 import Portfolio from "../components/portfolio/portfolio";
+import Footer from '../components/footer/footer';
+import Contact from '../components/contact/contact';
 
 
 
@@ -33,20 +35,12 @@ const HomePage = () => {
             <About />
             <Services />
             <Portfolio displayCount = {6} />
-              
+    
+           <Contact /> 
+          
+            <Footer />
 
-           
-
-            <div id="contact" className="fix">
-            <div className="container ">
-            <div className="row ">
-            <div className="rn-contact-area ptb--120">
-          {/*  <Contact /> */}
-            </div>
-            </div>
-            </div>
-            </div>
-           {/* <FooterTwo />
+            
             {/* Start Back To Top */}
             <div className="backto-top">
                 <ScrollToTop showUnder={160}>

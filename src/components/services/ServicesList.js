@@ -1,27 +1,29 @@
 
 import { FiCast , FiLayers , FiUsers , FiMonitor } from "react-icons/fi";
-
+import {GrAppleAppStore, GrReactjs} from "react-icons/gr";
+import {BsTerminal} from "react-icons/bs";
+import {GiTeacher} from "react-icons/gi";
 
 var ElsowinyServiceList = [
     {
-        icon: <FiLayers />,
-        title: 'Web Application Development',
-        description: 'Full Stack Web Application Development using a wide range of cutting-edge tools.',
+        icon: <GrReactjs />,
+        title: 'Web App Development',
+        description: 'Full Stack Web Application Development using a wide range of tools.',
     },
     
     {
-        icon: <FiCast />,
+        icon: <GrAppleAppStore />,
         title: 'App Development',
         description: 'Simple cross-platform mobile application development using the versatile React Native framework.',
     },
     
     {
-        icon: <FiMonitor />,
+        icon: <BsTerminal />,
         title: 'Software Development',
         description: 'Software development in several programming languages including but not limited to: Python, Java, TypeScript.',
     },
     {
-        icon: <FiUsers />,
+        icon: <GiTeacher />,
         title: 'Consulting & Tutoring',
         description: 'Capable of working on any web or mobile project. Can also aid any student in beginner and advanced computer science studies.',
     },

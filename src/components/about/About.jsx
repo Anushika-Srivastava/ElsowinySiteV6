@@ -1,6 +1,7 @@
 import React from 'react'
 import config from "./config";
 import myBitmi from "./bitmi.png";
+import HomeTabs from '../tabs/Tabs';
 export default function About() {
     let title = config.title, description = config.description;
 
@@ -22,10 +23,16 @@ export default function About() {
                              <div className="about-inner inner">
                                  <div className="section-title">
                                      <a href="/about"><h2 className="title">{title}</h2></a>
-                                     <p className="description">{description}</p>
+                                     <p className="description">
+                                                Software developer and computer scientist.
+                                                <br/>
+                                                    I am currently pursuing a master's degree in computer science from Columbus State University.
+                                                    This site will be updated periodically and contain some of my many projects.
+                                                More of my projects and the accompanying code can be found on my github page.
+                                     </p>
                                  </div>
                                  <div className="row mt--30">
-                                    {/* <TabTwo tabStyle="tab-style--1" /> */}
+                                    <HomeTabs/>
                                  </div>
                              </div>
                          </div>

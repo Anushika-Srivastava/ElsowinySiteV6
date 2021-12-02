@@ -8,10 +8,10 @@ import { FiX , FiMenu, FiGithub} from "react-icons/fi";
 export default function Header() {
    // let logoUrl = <img src={'../../'} alt="logo" />
    const SocialShare = [
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
-    ]
+    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/sheriefelsowiny'},
+    {Social: <FaInstagram /> , link: 'https://www.instagram.com/wiszird'},
+    {Social: <FaTwitter /> , link: 'https://twitter.com/wiszird'},
+]
     const homeLink = "/";
     const headerColor = "color-black"
 

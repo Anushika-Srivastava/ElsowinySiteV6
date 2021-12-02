@@ -5,7 +5,7 @@ const services = ServicesList.ElsowinyServiceList;
 
 export default function Services() {
     let title = 'Services',
-    description = 'Here are just a select few of the services I offer';
+    description = 'Here are a select few services I offer. For more information, or to request a quote, please contact me.';
     return (
         <div id="service" className="service-area ptb--80  bg_image">
             <div className="container">
