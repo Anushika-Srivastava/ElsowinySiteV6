@@ -4,6 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import axios from "axios";
 
 const schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -11,11 +12,18 @@ const schema = yup.object().shape({
     message: yup.string().required("Message is required")
 });
 
+let url = process.env.REACT_APP_URL;
+let emailURL = process.env.REACT_APP_EMAIL;
 
 
 
 
 export default function Contact(){
+ const [submitted, setSubmitted] = useState(false);
+ const [recaptcha, setRecaptcha] = useState(false);
+ const [errorMsg, setError] = useState(false);
+
+
     const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
@@ -24,18 +32,50 @@ export default function Contact(){
         console.log("submitted");
         console.log(data);
         const token = await recaptchaRef.current.executeAsync();
-        await verifyRecaptcha(token);
+        let verifiedRecaptcha = await verifyRecaptcha(token);            
+        console.log(verifiedRecaptcha);
     }
 
     const recaptchaRef = useRef();
 
      const verifyRecaptcha = async(recaptchaToken) => {
-         console.log(recaptchaToken);
-         if(recaptchaToken){
-             console.log("verified");
+         if(!recaptchaToken){
+             return {
+                    success: false,
+                    message: "Please complete the recaptcha"
+             }
          }
-         
+         let bodyData = {token: recaptchaToken};
+            //await axios.post(url, bodyData)
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({
+                        success: true,
+                        message: "Success"
+                    })
+                }, 1000)
+                reject({
+                    success: false,
+                    message: "Error"
+                })
+            })
+
+
     }
+
+    const submitData = async(data) => {
+        console.log(data);
+        let bodyData = {
+            name: data.name,
+            email: data.email,
+            message: data.message,
+            subject: data.subject ? data.subject : "Contact form submission"
+    }
+    let response = await axios.post(url, bodyData);
+    console.log(response);
+    }
+
 
         return(
 <div id="contact" className="fix">

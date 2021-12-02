@@ -6,6 +6,11 @@ import './App.css';
 const HOME = process.env.PUBLIC_URL;
 
 function App() {
+  function test(){
+    console.log('test');
+    console.log(process.env.REACT_APP_GOOGLE_VERIFY_CAPTCHA)
+  }
+  test();
   return (
     <BrowserRouter basename={'/'} element={<HomePage />}>
       <Routes>
