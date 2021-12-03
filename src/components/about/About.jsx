@@ -14,12 +14,12 @@ export default function About() {
                  <div className="container">
 
                      <div className="row row--35 align-items-center">
-                         <div className="col-lg-5">
+                         <div className="col-lg-5 visibleOverParticles">
                              <div className="thumbnail">
                                  <img className="w-100" src={myBitmi} alt="Sherief Elsowiny"/>
                              </div>
                          </div>
-                         <div className="col-lg-7">
+                         <div className="col-lg-7 visibleOverParticles">
                              <div className="about-inner inner">
                                  <div className="section-title">
                                      <a href="/about"><h2 className="title">{title}</h2></a>

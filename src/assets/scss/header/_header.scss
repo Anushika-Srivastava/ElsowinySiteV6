@@ -53,9 +53,8 @@
                 height: 46px;
                 display: inline-block;
                 line-height: 42px;
-                border: 2px solid #b1b4c1;
+                border: 2px solid $theme-color;
                 border-radius: 6px;
-                color: #c6c9d8;
                 font-size: 14px;
                 @extend %transition;
                 position: relative;
@@ -109,8 +108,8 @@
     &.color-black {
         a{
             &.rn-btn {
-                border: 2px solid rgba(29, 29, 36, 0.5);
-                color: #1d1d24;
+                border: 2px solid $theme-color;
+                color: white;
             }
         }
     }
@@ -235,7 +234,7 @@
 
         &.sticky {
             position: fixed;
-            background: #ffffff;
+            background: transparent;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             .header-wrapper {
                 padding: 0px;
@@ -645,5 +644,12 @@
 //particles canvas header
 
 #tsparticles > canvas {
-    position: absolute !important;
+   // position: absolute !important;
+   //uncomment to make particles appear
+   //in the header
+}
+
+
+.visibleOverParticles{
+    z-index: 3;
 }

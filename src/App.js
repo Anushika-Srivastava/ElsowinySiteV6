@@ -1,21 +1,21 @@
-import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route , Navigate } from 'react-router-dom';
 import logo from './logo.svg';
 import HomePage from './pages/Home';
 import './App.css';
+import Blog from "./components/blog/Blog";
+import BlogDetails from "./components/blog/BlogDetails";
+import Error404 from './pages/Error404';
 
-const HOME = process.env.PUBLIC_URL;
 
 function App() {
-  function test(){
-    console.log('test');
-    console.log(process.env.REACT_APP_GOOGLE_VERIFY_CAPTCHA)
-  }
-  test();
   return (
     <BrowserRouter basename={'/'} element={<HomePage />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route exact path={`${HOME}/`} component={HomePage}/>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogs/:blogSlug" element={<BlogDetails />} />
+        <Route path="/404" element={<Error404 />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>
   );

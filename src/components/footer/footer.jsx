@@ -12,9 +12,9 @@ const SocialShare = [
 const Footer = () => {
 
     let currentYear = new Date().getFullYear();
-    let Copyright = `Copyright ${currentYear} Elsowiny.com All Rights Reserved.`
+    let Copyright = `Copyright ${currentYear}`
     return (
-        <div className="footer-style-2 bg_image bg_image--1" data-black-overlay="6">
+        <div className="footer-style-2 bg_image bg_image--1 visibleOverParticles" data-black-overlay="6">
             <div className="wrapper plr--50 plr_sm--20">
                 <div className="row align-items-center justify-content-between">
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -38,7 +38,7 @@ const Footer = () => {
                     <div className="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
                             <div className="text">
-                                <p>{Copyright}</p>
+                                <p>{Copyright} <span className="blueify">Elsowiny.com</span> All rights reserved</p>
                             </div>
                         </div>
                     </div>

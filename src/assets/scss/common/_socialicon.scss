@@ -19,6 +19,9 @@ ul {
                 font-size: 14px;
                 @extend %transition;
             }
+            svg {
+                color: $theme-color !important;
+            }
             &:hover {
                 a {
                     background: $theme-color;
@@ -26,6 +29,9 @@ ul {
                     color: #ffffff;
                     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
                     transform: translateY(-3px);
+                }
+                svg {
+                    color: #ffffff !important;
                 }
             }
         }

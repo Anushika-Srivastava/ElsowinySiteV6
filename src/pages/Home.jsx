@@ -14,8 +14,8 @@ import Slider from '../components/slider/Slider';
 import Services from '../components/services/Services';
 
 import Header from "../components/header/Header";
-import Portfolio from "../components/portfolio/portfolio";
-import Footer from '../components/footer/footer';
+import Portfolio from "../components/portfolio/Portfolio";
+import Footer from '../components/footer/Footer';
 import Contact from '../components/contact/contact';
 
 
@@ -32,11 +32,12 @@ const HomePage = () => {
 
             <Header />
             <Slider />
+          
             <About />
             <Services />
             <Portfolio displayCount = {6} />
     
-           <Contact /> 
+             <Contact /> 
           
             <Footer />
 

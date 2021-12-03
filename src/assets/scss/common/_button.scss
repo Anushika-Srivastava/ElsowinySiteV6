@@ -75,7 +75,7 @@ a {
         letter-spacing: 2px;
         border: 2px solid #b1b4c1;
         padding: 15px 40px;
-        border-radius: 6px;
+        border-radius: 20px;
         display: inline-block;
         font-weight: 500;
         transition: 0.3s;
@@ -105,16 +105,12 @@ a {
         }
         &.btn-solid {
             border: 2px solid $theme-color;
-            background: $theme-color;
-            color: #ffffff;
-        }
-        &.btn-solid {
-            background: $theme-color;
+           // background: #007db9;
             color: #ffffff;
         }
         &:hover{
-            background: transparent;
-            color: #f9004d;
+            background: rgba(15, 255, 222, 0.2);
+            color: white;
             box-shadow: 0 10px 15px 0 rgba(0,0,0,0.1);
             transform: translateY(-5px);
         }

@@ -2,99 +2,109 @@
 
 
 var ElsowinyPortfolioListContent = [
+    {
+        image: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/projs/Black%20Axe.png',
+        category: 'Software startup',
+        title: 'Black Axe Tech',
+        description: `Black Axe Tech is a company cofounded by my brother and I. It is a startup that focuses on the development of software for financial software technology.
+        The company is still in its early stages, but we have already developed some products geared towards the financial industry.
+        We currently have several products in the pipeline, and are 
+        eager to see what we can do to make a difference in the world of finance and tech.
+        here is our current website which I took the pleasure in building for our company.`,
+        link: 'https://blackaxetech.com/',
+        linkText: 'Visit website',
+        github: 'https://github.com/Black-Axe',
+        projectCoverImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/aafc0be3e2b3e936a23ad5d5c76d386d957e70b3/coverimages/startup.svg",
+        projectImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/baxesite.png",
+        projectImageTwo: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/baxsite2.png',
+        tech: "React, Node",
+        openSource: false,
+    },
  
     {
-        image: 'digi2',
+        image: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/projs/ecom.png',
         category: 'Web Development',
         title: 'React Full Stack Ecommerce',
-        page: 'projects/ReactEcommerce'
+        description: `A full stack ecommerce application built with React, Redux, and other various APIs. This project was built in conjunction with a course.
+        The application is a fully functional ecommerce application that allows users to create an account, login, and purchase products. 
+        it was built to brush up on the fundamentals of React, Redux, and other APIs and to serve as a learning experience for the course.
+        The application is hosted on Heroku and only serves as a VERY slight example of what I am capable of.`,
+        link: 'https://crwn-live-se.herokuapp.com/',
+        linkText: 'Visit website',
+        github: 'https://github.com/elsowiny/React-Ecommerce',
+        projectCoverImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/4694c4b2588685045338a0541811ace735db099d/coverimages/shopping.svg",
+        projectImage: "https://raw.githubusercontent.com/elsowiny/React-Ecommerce/master/repoIMG/crwn.png",
+        projectImageTwo: 'https://raw.githubusercontent.com/elsowiny/React-Ecommerce/master/repoIMG/crwn2.png',
+        tech: 'React, Redux, Node, Express, MongoDB, Stripe API',
+        openSource: true,
+
     },
 
     {
-        image: 'digi4',
+        image: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/projs/hopes.png',
         category: 'Web Development',
-        title: 'React Full Stack Memories Project',
-        page: 'projects/MERNMemories'
+        title: 'Hopes on Horizon',
+        description: `A full stack application built with React, Node, Express to serve as a client side for displaying animals available for adoption.`,
+        link: 'https://hopesonhorizon.com/',
+        github: 'https://github.com/elsowiny/HopesOnHorizon',
+        projectCoverImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/e22aa8b21e728b8ed38b9d893196242ce653a36b/coverimages/good_dog.svg",
+        projectImage: "https://raw.githubusercontent.com/elsowiny/HopesOnHorizon/master/gitimg/hope1.png",
+        projectImageTwo: 'https://raw.githubusercontent.com/elsowiny/HopesOnHorizon/master/gitimg/hope3.png',
+        tech: 'React, Node, Express',
+        openSource: true,
     },
     {
-        image: 'digi2',
+        image: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/projs/video.png',
         category: 'Web Development',
         title: 'React Video Chat',
-        page: 'projects/ReactVideoChat'
+        description: 'A video chat application built with React, Node, Express, and Socket.io. This application allows users to chat with each other in real time via video format.',
+        link: 'https://web-chat-se.netlify.app/',
+        github: 'https://github.com/elsowiny/React-Video-Chat-App',
+        tech: 'React, Node, Express, MongoDB, Socket.io',
+        projectCoverImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/b7214f2fb9a6cf65e1d1093561bca51e6cb4ba91/coverimages/video_chat.svg",
+        projectImage: "https://raw.githubusercontent.com/elsowiny/React-Video-Chat-App/main/repo_uml_img/readme.png",
+        projectImageTwo: 'https://raw.githubusercontent.com/elsowiny/React-Video-Chat-App/main/repo_uml_img/Screenshot%202021-12-03%20014722.png',
+        openSource: true,
     },
   
    {
-    image: 'digi3',
+    image: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/projs/sentiment.png',
     category: 'Data Science/Software Dev/Web dev',
-    title: 'Python Twitter Sentiment Analysis',
-    page: '/projects/SentimentAnalysis'
+    title: 'Twitter Sentiment Analysis',
+    description: `This project starts off by connecting with the Twitter API to pull/stream in Tweets to a SQL database.
+     Another API fetches the stored Tweets and related analysis after being triggered from the front-end GUI built with Dash and Flask.
+     The front end allows for searchable terms to be looked up in the database of Tweets where in graphical detail the sentiment can be viewed`,
+    link: 'https://github.com/elsowiny/TwitterSentimentAnalysis',
+    github: 'https://github.com/elsowiny/TwitterSentimentAnalysis',
+    tech: 'Python, Numpy, Pandas, Dash, Flask, SQL',
+    projectCoverImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/d9b3d0f62f7b65f84a49fae2e325e2686525fdc3/coverimages/finance.svg",
+    projectImage: "https://raw.githubusercontent.com/elsowiny/TwitterSentimentAnalysis/master/imgs/tesla.png",
+    projectImageTwo: "https://raw.githubusercontent.com/elsowiny/TwitterSentimentAnalysis/master/imgs/covid.png",
+    openSource: true,
 },
 {
-    image: 'digi',
-    category: 'Data Science',
-    title: 'Python Machine Learning',
-    page: 'projects/python-machine-learning',
-    github: 'https://github.com/elsowiny/Python-Machine-Learning'
+    image: 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/projs/token.png',
+    category: 'Open Source',
+    title: 'TypeScript Mongo Token Template',
+    description: `This project is a template for a MongoDB token based authentication system.
+    It is built with Typescript and MongoDb as well as Node.js and Express.js.
+    The project is a template built for Black Axe, that is available for use in any project to anyone.
+    The project makes use of access and refresh tokens to authenticate users and comes with easy setup to get going.
+    When a user registers for a token, or triggers a new token from their refresh token, the tokens are stored in a MongoDB database.
+    as well as stored in cookies for the user to be able to access the API easily.`,
+    link: 'https://github.com/Black-Axe/TypeScriptMongoNodeExpressTokenAuthBoilerplate',
+    github: 'https://github.com/Black-Axe/TypeScriptMongoNodeExpressTokenAuthBoilerplate',
+    projectCoverImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/f43e264b053d53f542c6a90892740ba8575c9e9d/coverimages/team.svg",
+    projectImage: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/baxe/demo_ts.png",
+    projectImageTwo: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/baxe/demo_ts_mongo.png",
+    tech: 'TypeScript, MongoDB, Node.js, Express.js',
+    openSource: true,
 },
 
 
-   {
-        image: 'digi3',
-        category: 'Web Dev',
-        title: 'Spotify House Party',
-        page: 'projects/SpotifyHouseParty'
-    },
-   {
-        image: 'digi3',
-        category: 'Mobile Dev',
-        title: 'Budgie Flappy',
-        page: 'projects/BudgieFlappy'
-    },
-
-    {
-        image: 'digi4',
-        category: 'Scripting',
-        title: 'Python Google Geocoding',
-        page: 'projects/PythonGoogleGeocoding'
-    },
-    
-    {
-        image: 'digi3',
-        category: 'Software Dev',
-        title: 'Java Spring Rest',
-        page: 'projects/JavaSpringRest'
-    },
-    {
-        image: 'digi2',
-        category: 'Web Dev',
-        title: 'Postman Clone',
-        page: 'projects/PostmanClone'
-    },
-   {
-        image: 'digi',
-        category: 'Software Dev',
-        title: 'Java Email Encryption',
-        page: 'projects/JavaEmail'
-    },
-    
-  
- 
-    {
-        image: 'digi2',
-        category: 'Software Dev',
-        title: 'Java Finance & Web Scrape',
-        page: 'projects/JavaFinance'
-    },
-    {
-        image: 'digi3',
-        category: 'Web Development',
-        title: 'Angular Full Commerce Website',
-        page: 'projects/AngularEcommerce'
-    },
-   
     
   
     
 ]
 
-export default {ElsowinyPortfolioListContent}
+export default ElsowinyPortfolioListContent;

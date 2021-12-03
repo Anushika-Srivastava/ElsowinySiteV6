@@ -5,6 +5,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import axios from "axios";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import { css } from "@emotion/react";
+
+
 
 const schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -15,28 +19,57 @@ const schema = yup.object().shape({
 let url = process.env.REACT_APP_URL;
 let emailURL = process.env.REACT_APP_EMAIL;
 
-
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+let color = "#FFFF00";
 
 
 export default function Contact(){
  const [submitted, setSubmitted] = useState(false);
- const [recaptcha, setRecaptcha] = useState(false);
+ const [submitting, setSubmitting] = useState(false);
+ const [recaptchaVerified, setRecaptchaVerified] = useState(false);
  const [errorMsg, setError] = useState(false);
+ const [errorMessage, setErrorMessage] = useState(false);
 
+ const [loading, setLoading] = useState(false);
+ const [personsName, setPersonsName] = useState("");
+ const [disableFields, setDisabledFields] = useState(false);
+
+ const recaptchaRef = useRef();
 
     const { register, handleSubmit, formState:{ errors } } = useForm({
         resolver: yupResolver(schema)
       });
 
     const onSubmit = async data => {
-        console.log("submitted");
+        console.log("submittin form");
+        setSubmitting(true);
+        setDisabledFields(true);
         console.log(data);
         const token = await recaptchaRef.current.executeAsync();
-        let verifiedRecaptcha = await verifyRecaptcha(token);            
-        console.log(verifiedRecaptcha);
-    }
+        let verifiedRecaptcha = await verifyRecaptcha(token);
+        if(verifiedRecaptcha.verified){
+            let resp = await submitData(data);
+            if(resp.status === 200){
+                setPersonsName(data.name);
+                setSubmitted(true);
+                setLoading(false);
+                setSubmitting(false);
+                setError(false);
+            }
+            else{
+                setError(true);
+            }
+        }
+        else{
+            setError(true);
+        }
+    };
 
-    const recaptchaRef = useRef();
+    
 
      const verifyRecaptcha = async(recaptchaToken) => {
          if(!recaptchaToken){
@@ -47,51 +80,65 @@ export default function Contact(){
          }
          let bodyData = {token: recaptchaToken};
             //await axios.post(url, bodyData)
-
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve({
-                        success: true,
-                        message: "Success"
-                    })
-                }, 1000)
-                reject({
+            return await axios.post(url, bodyData).then(res => {
+                return res.data;
+            }).catch(err => {
+                console.log(err);
+                return {
                     success: false,
-                    message: "Error"
-                })
+                    message: "Something went wrong"
+                }
             })
-
-
     }
+
 
     const submitData = async(data) => {
         console.log(data);
+        setLoading(true);
         let bodyData = {
             name: data.name,
             email: data.email,
             message: data.message,
             subject: data.subject ? data.subject : "Contact form submission"
-    }
-    let response = await axios.post(url, bodyData);
-    console.log(response);
+        }
+         return await axios.post(emailURL, bodyData);
+    
     }
 
 
-        return(
+return(
+
 <div id="contact" className="fix">
-    <div className="container ">
-    <div className="row ">
-        <div className="rn-contact-area ptb--120">
-            <div className="contact-form--1">
-                <div className="container">
-                    <div className="row row--35 align-items-start">
-                        <div className="col-lg-6 order-2 order-lg-1">
-                            <div className="section-title text-left mb--50">
-                                <h2 className="title">Contact</h2>
-                                <p className="description">I am available for freelance work, consulting, or tutoring. < br /> Connect with me via email:
-                                    <a href="mailto:elsowiny@yahoo.com"> elsowiny@yahoo.com</a> </p>
-                            </div>
-                            <div className="form-wrapper">
+    <div className="container "> 
+        <div className="row ">
+            <div className="rn-contact-area ptb--120">
+                <div className="contact-form--1">
+                    <div className="container">
+                        <div className="row row--35 align-items-start">
+                            <div className="col-lg-6 order-2 order-lg-1 visibleOverParticles">
+                                <div className="section-title text-left mb--50">
+                                    <h2 className="title"><span className="blueify">Contact</span></h2>
+                                    {//errors
+                                    
+                                    errorMsg ? <h4 className="text-danger">Something went wrong, please try again</h4> :
+                                    ""
+                                    }
+                                        <p className="description">I am available for freelance work, consulting, or tutoring. < br /> Connect with me via email:
+                                        <a href="mailto:elsowiny@yahoo.com"> elsowiny@yahoo.com</a> </p>
+                        </div>
+                            {
+
+                                submitted ?
+                                <div className="alert alert-success" role="alert">
+                                    Thank you {personsName} for your message. I will get back to you as soon as possible.
+                                </div>
+                                :
+                                loading ?
+                                <div className="paccy">
+                                <PacmanLoader css={override} size={30} color={color} loading={loading} />
+                                </div>
+                                :
+                                <div className="form-wrapper">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                     <label htmlFor="item01">
                                     {<p className="form-error">{errors.name?.message}</p>}
@@ -100,6 +147,7 @@ export default function Contact(){
                                             name="name"
                                             id="item01"
                                             placeholder="Your Name *"
+                                            disabled={disableFields}
                                         />
                                         
 
@@ -113,6 +161,7 @@ export default function Contact(){
                                             name="email"
                                             id="item02"
                                             placeholder="Your email *"
+                                            disabled={disableFields}
                                         />
                                         
                                     </label>
@@ -123,6 +172,7 @@ export default function Contact(){
                                             name="subject"
                                             id="item03"
                                             placeholder="Write a Subject"
+                                            disabled={disableFields}
                                         />
                                         
                                     </label>
@@ -135,9 +185,11 @@ export default function Contact(){
                                             id="item04"
                                             name="message"
                                             placeholder="Your Message"
+                                            disabled={disableFields}
                                         />
                                     </label>
-                                    <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit</button>
+                                    <button disabled={disableFields} className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">{submitting ? "submitting" : "Submit"}</button>
+                                
                                    <br />
                                    <br />
                                     <ReCAPTCHA
@@ -147,11 +199,14 @@ export default function Contact(){
                                         ref={recaptchaRef}                    
                                     />
                                 </form>
-
-                               
                             </div>
+
+
+                            }
+                            
                         </div>
-                        <div className="col-lg-6 order-1 order-lg-2">
+
+                        <div className="col-lg-6 order-1 order-lg-2 visibleOverParticles">
                             <div className="thumbnail mb_md--30 mb_sm--30">
                                 <img src={logo} alt="elsowiny"/>
                             </div>
@@ -160,9 +215,10 @@ export default function Contact(){
                 </div>
             </div>
 
+
+            </div>
         </div>
-        </div>
-        </div>
-        </div>
+    </div>
+</div>
         )
     }

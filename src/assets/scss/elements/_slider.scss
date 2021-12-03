@@ -46,10 +46,9 @@ Slider Default Style
         h1 {
             &.title {
                 font-size: 125px;
-                font-weight: 900;
+                font-weight: 400;
                 text-transform: uppercase;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 900;
+                font-family: $heading-font;
                 line-height: 130px;
                 @media #{$laptop-device} {
                     font-size: 100px;
@@ -189,7 +188,7 @@ Slider Default Style
                 &.title {
                     color: #ffffff;
                     font-size: 100px;
-                    font-weight: 900;
+                    font-weight: 700;
                     
                     @media #{$lg-layout} {
                         font-size: 72px;
@@ -290,8 +289,8 @@ Slider Default Style
                 &.title {
                     color: #1f1f25;
                     font-size: 75px;
-                    font-weight: 900;
-                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 700;
+                    font-family: $heading-font;
                     line-height: 90px;
                     text-transform: inherit;
                     width: 70%;
@@ -871,4 +870,9 @@ Custom Animation
 .box-model .inner {
     text-align: center;
     margin-bottom: 60px;
+}
+
+
+.miniHeader{
+    font-size: 40px;
 }

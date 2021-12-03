@@ -14,3 +14,13 @@ export default function ReactParticles() {
     )
 }
      
+export function ReactFormParticles(){
+    return (
+        <div className="particlesRelative">
+            <Particles
+                className="formParticles"
+                options={options}
+            />
+        </div>
+    )
+}

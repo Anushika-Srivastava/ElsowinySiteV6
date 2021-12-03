@@ -1,5 +1,17 @@
 import React from "react";
+import {DiReact} from "react-icons/di"; 
+import {IoLogoNodejs} from "react-icons/io";
+import {SiExpress} from "react-icons/si";
+import {DiDjango} from "react-icons/di";
+import {SiFlask, SiPython,
+     SiTypescript, SiRedux, SiMysql,
+      SiMongodb, SiPostgresql,SiGithub,SiBitbucket,
+       SiJest, SiTestinglibrary, SiAirbnb,
+    SiFirebase, SiAmazonaws, SiGoogle, SiHeroku, SiDocker, SiKubernetes,
+     SiJava, SiSpringboot, SiHtml5, SiCss3} from "react-icons/si";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {FaGit} from "react-icons/fa"
+import {DiSass} from "react-icons/di";
 
 export default function HomeTabs(){
 
@@ -60,6 +72,11 @@ export default function HomeTabs(){
                                        <div className="single-tab-content">
                                            <ul>
                                                <li>
+                                                   <span className="tabHeader">Software Engineer - <span className="lvl">Black Axe Tech (cofounded)</span></span>
+                                                   <br />
+                                                   2021 - Current
+                                               </li>
+                                               <li>
                                                    <span className="tabHeader">Software Engineer - <span className="lvl">Self</span></span>
                                                    <br />
                                                    2020 - Current
@@ -82,12 +99,12 @@ export default function HomeTabs(){
                                        <div className="single-tab-content">
                                            <ul>
                                                <li>
-                                               <span className="tabHeader">Masters in Computer Science<span> - Columbus State, GA</span></span>
+                                               <span className="tabHeader">Masters in Computer Science<span className="lvl"> - Columbus State, GA</span></span>
                                                   <br />
                                                   <span>*Concentration in Software Engineering - <span>2022</span></span>
                                                </li>
                                                <li>
-                                               <span className="tabHeader">Bachelors in Economics<span> - Rutgers University, NJ</span></span>
+                                               <span className="tabHeader">Bachelors in Economics<span className="lvl"> - Rutgers University, NJ</span></span>
                                                 <br />
                                                 <span>*Minor in Music - <span>2018</span></span>
                                                </li>
@@ -100,41 +117,110 @@ export default function HomeTabs(){
                                        <div className="single-tab-content">
                                            <ul>
                                                <li>
-                                                   <strong>React</strong>  &emsp;&emsp; <strong>Node.js</strong>
-                                                   &emsp;&emsp; <strong>Express</strong>
+                                                   <span className="lvlSkills"><DiReact size={50} /></span> 
+                                                   <span className="lvlSkillsTwo">React</span>
+                                                    &emsp;&emsp; 
+                                                    <span className="lvlSkills"><IoLogoNodejs size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Node.js</span>                                                      
+                                                   &emsp;&emsp; 
+                                                   <span className="lvlSkills"><SiExpress size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Express</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiDocker size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Docker</span>
                                                </li>
                                                <li>
-                                                   
+                                               <span className="lvlSkills"><DiDjango size={50} />  </span>
+                                                    <span className="lvlSkillsTwo">Django</span>
+                                                    &emsp;&emsp;
+                                                    
+                                                    <span className="lvlSkills"> <SiFlask size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Flask</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiPython size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Python</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiJava size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Java</span>
+                                                    
                                                </li>
                                                <li>
-                                                   <strong>Django</strong>&emsp;&emsp;<strong>Flask</strong>
-                                                   &emsp;&emsp;<strong>Python</strong>
-                                               </li>
-                                               <li>
-                                                   <strong>TypeScript</strong>&emsp;&emsp; <strong>React Native</strong>
-                                                   &emsp;&emsp; <strong>Redux</strong>
+                                                   <span className="lvlSkills"><SiTypescript size={50} />  </span>
+                                                    <span className="lvlSkillsTwo">Typescript</span>
+                                                    &emsp;&emsp;
+                                                   <span className="lvlSkills"><DiReact size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">React Native</span>
+                                                   &emsp;&emsp; 
+                                                   <span className="lvlSkills"><SiRedux size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Redux</span>
+                                                    &emsp;&emsp;
+                                                  
                                                </li>
                     
                                                <li>
-                                                   <strong>MySql</strong>&emsp;&emsp; <strong>MongoDB</strong>
-                                                    &emsp;&emsp; <strong>PostgreSQL</strong>
+                                                   <span className="lvlSkills"><SiMysql size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">MySQL</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiMongodb size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">MongoDB</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiPostgresql size={50} /> </span>
+                                                     <span className="lvlSkillsTwo">PostgreSQL</span>
                                                </li>
                                                <li>
-                                                <strong>Git</strong>&emsp;&emsp; <strong>GitHub</strong>
-                                                &emsp;&emsp; <strong>BitBucket</strong>
+                                                   <span className="lvlSkills"><FaGit size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Git</span>
+                                                    &emsp;&emsp; 
+                                                    <span className="lvlSkills"><SiGithub size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">GitHub</span>
+                                                    &emsp;&emsp; 
+                                                    <span className="lvlSkills"><SiBitbucket size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Bit Bucket</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiCss3 size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">CSS</span>
                                                 </li>
                                               
                                                <li>
-                                                    <strong>Jest</strong>&emsp;&emsp; <strong>React Testing Library</strong>
-                                                    &emsp;&emsp; <strong>Enzyme</strong>
+                                                   <span className="lvlSkills"><SiJest size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Jest</span>
+                                                    &emsp;&emsp;
+
+                                                    <span className="lvlSkills"><SiTestinglibrary size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">React Testing Library</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiAirbnb size={50} /> </span> 
+                                                    <span className="lvlSkillsTwo">Enzyme</span>
                                                 </li>
 
                                             <li>
-                                                   <strong>FireBase</strong>&emsp;&emsp; <strong>AWS</strong>
-                                                    &emsp;&emsp; <strong>Google Cloud</strong>
-                                                    &emsp;&emsp; <strong>Heroku</strong>
-                                                    &emsp;&emsp; <strong>Netlify</strong>
+                                                <span className="lvlSkills"><SiFirebase size={50} /> </span>
+                                                <span className="lvlSkillsTwo">Firebase</span>
+                                                &emsp;&emsp;
+                                                <span className="lvlSkills"><SiAmazonaws size={50} /> </span>
+                                                <span className="lvlSkillsTwo">AWS</span>
+                                                &emsp;&emsp;
+                                                <span className="lvlSkills"><SiGoogle size={50} /> </span>
+                                                <span className="lvlSkillsTwo">Google Cloud</span>
+                                                &emsp;&emsp;
+                                                <span className="lvlSkills"><SiHeroku size={50} /> </span>
+                                                <span className="lvlSkillsTwo">Heroku</span>
+                                                &emsp;&emsp;
+
                                                </li>
+                                                  <li>
+                                                  <span className="lvlSkills"><SiKubernetes size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Kubernetes</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiSpringboot size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Spring Boot</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><SiHtml5 size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">HTML5</span>
+                                                    &emsp;&emsp;
+                                                    <span className="lvlSkills"><DiSass size={50} /> </span>
+                                                    <span className="lvlSkillsTwo">Sass</span>
+                                                    </li>
                                           
                                            </ul>
                                        </div>
