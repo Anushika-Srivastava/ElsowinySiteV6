@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import logo from "../header/logo.png";
+import logo from "../header/elsowiz.png";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';

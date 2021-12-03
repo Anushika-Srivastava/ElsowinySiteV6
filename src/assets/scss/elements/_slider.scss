@@ -312,7 +312,7 @@ Slider Default Style
                     }
 
                     span{
-                        color: $theme-color;
+                      //  color: $theme-color;
                     }
                 }
             }
@@ -386,6 +386,7 @@ Personal Portfolio
         &.slider-style-3 {
             @media #{$sm-layout} {
                 padding: 100px 0;
+                margin-top:20%;
             }
             @media #{$md-layout} {
                 padding: 150px 0;
@@ -406,7 +407,7 @@ Personal Portfolio
                     &.title{
                         @media #{$sm-layout} {
                             font-size: 32px;
-                            line-height: 49px;
+                            line-height: 65px;
                         }
                         @media #{$md-layout} {
                             font-size: 53px;
@@ -418,7 +419,7 @@ Personal Portfolio
                         }
                         @media #{$laptop-device} {
                             font-size: 54px;
-                            line-height: 68px;
+                            line-height: 98px;
                         }
                     }
                 }
@@ -875,4 +876,10 @@ Custom Animation
 
 .miniHeader{
     font-size: 40px;
+    margin-top:-46px;
+}
+
+.glitch-out{
+    margin-top: -20px;
+    line-height: 94px;
 }

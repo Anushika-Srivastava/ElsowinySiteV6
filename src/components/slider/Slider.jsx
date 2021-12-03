@@ -36,12 +36,12 @@ export default function Slider() {
                                     <div className="col-lg-12">
                                         <div className={`inner ${value.textPosition}`}>
                                             {value.category ? <span>{value.category}</span> : ''}
-                                            <h1 className="title">Hi, I’m Sherief Elsowiny <br/>
+                                            <h1 className="title glitch-out">Hi, I’m Sherief Elsowiny <br/>
                                             <TextLoop>
                                                 
-                                                <span> Software Developer.</span>
-                                                <span> Computer Scientist.</span>
-                                                <span> Web/Mobile Developer.</span>
+                                                <span data-text={"Software Developer"}className="sherief-glitched"> Software Developer.</span>
+                                                <span data-text={"Computer Scientist"}className="sherief-glitched"> Computer Scientist.</span>
+                                                <span data-text={"Web/Mobile Developer"}className="sherief-glitched"> Web/Mobile Developer.</span>
                                                 
                                             </TextLoop>{" "}
                                             </h1>

@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter basename={'/'} element={<HomePage />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blogs/:blogSlug" element={<BlogDetails />} />
+        <Route path="/articles" element={<Blog />} />
+        <Route path="/articles/:blogSlug" element={<BlogDetails />} />
         <Route path="/404" element={<Error404 />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import {FaTwitter ,FaInstagram  , FaLinkedinIn } from "react-icons/fa";
 import { FiX , FiMenu, FiGithub} from "react-icons/fi";
 
-export default function Header() {
+export default function InnerHeader() {
    // let logoUrl = <img src={'../../'} alt="logo" />
    const SocialShare = [
     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/sheriefelsowiny'},
@@ -69,10 +69,10 @@ export default function Header() {
                         <nav className="mainmenunav d-lg-block ml--50">
                             <Scrollspy className="mainmenu" items={['home','about','service','portfolio','lectures','contact']} currentClassName="is-current" offset={-200}>
                             <li><a href="/">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#service">Services</a></li>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="/#about">About</a></li>
+                                <li><a href="/#service">Services</a></li>
+                                <li><a href="/#portfolio">Portfolio</a></li>
+                                <li><a href="/#contact">Contact</a></li>
                                 <li><a href="/articles">Articles</a></li>
                             </Scrollspy>
                         </nav>

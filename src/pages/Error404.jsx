@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from "../components/header/Header";
+import Header from "../components/header/InnerHeader";
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Footer from "../components/footer/Footer";

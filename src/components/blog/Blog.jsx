@@ -2,10 +2,11 @@ import React,  {  useEffect, useState } from "react";
 import { sanitize } from 'dompurify';    
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
-import Header from "../../components/header/Header";
+import Header from "../../components/header/InnerHeader";
 import Footer from "../../components/footer/Footer";
 import { Link } from 'react-router-dom';
 import Particles from "../particles/Particles";
+import Helmet from "../../components/common/Helmet";
 
 const fetchUrl = 'https://wiszird.com/wp-json/wp/v2/posts?_embed';
 const blogImgUrl = 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/art.png';
@@ -23,10 +24,14 @@ export default function Blog2(){
             const posts = await response.json();
             setPosts(posts);
             
-            console.log(posts);
+            //console.log(posts);
         }
         loadPosts();
     }, [])
+
+    const cleanTitle = (title) => {
+          return title.replace(/[^a-zA-Z]/g, "");
+      }
  
     
         //const posts = useFetch(fetchUrl);
@@ -39,6 +44,8 @@ export default function Blog2(){
                 {/* Start Breadcrump Area *
                 <Breadcrumb title={'Blog'}   />
                 {/* End Breadcrump Area */}
+                  <Helmet pageTitle="Sherief Elsowiny Articles" />
+
 
 
             <div className="active-dark">
@@ -54,13 +61,14 @@ export default function Blog2(){
              
                         <div className="row">
                             {posts.map((post, index) => (
+                                  
      <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={index}>                         
            <div className="blog blog-style--1">  
 
            <div className="thumbnail">
            <img className="w-100" src={blogImgUrl} alt="Blog Images"/>
           <Link  to={{
-              pathname: '/blogs/'+(post.slug),
+              pathname: '/articles/'+(post.slug),
               state:    {
                   post:post
                 }
@@ -76,13 +84,11 @@ export default function Blog2(){
 
 
 
-        <div className="content">
-        <p className="blogtype">{post._embedded['wp:term'][0][0].slug}</p>
-                <h2 className="elsowinyBlog"
+        <div className="content blog-display-content">
+        <p className="blogtype author-glitched" data-text={post._embedded['wp:term'][0][0].slug}>{post._embedded['wp:term'][0][0].slug}</p>
+                <h2 data-text={cleanTitle(post?.title?.rendered)} className="elsowinyBlog"
                     dangerouslySetInnerHTML={{__html: sanitize(post.title.rendered)}} />
-                <p className="blogtype"
-                    
-                    dangerouslySetInnerHTML={{__html: sanitize(post.excerpt.rendered)}} />
+ 
                     <div className="blog-btn">
                                         <span className="rn-btn text-white" href={post.slug}>Read More</span>
                                     </div>

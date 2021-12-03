@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaTwitter ,FaInstagram  , FaLinkedinIn} from "react-icons/fa";
-import logo from "../header/logo.png";
+import logo from "../header/elsowiz.png";
 
 const SocialShare = [
     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/in/sheriefelsowiny'},
