@@ -81,7 +81,7 @@ const BlogDetails = ({match,  data}) => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="blog-single-page-title text-center pt--100">
-                                <h2 data-text={cleanedTitle} className="title article-title" dangerouslySetInnerHTML={
+                                <h2 className="title article-title" dangerouslySetInnerHTML={
                                     {__html: sanitize(postFromSlug?.title ? postFromSlug?.title?.rendered : 'invalid title' )}
                                     } />
                                 <ul className="blog-meta d-flex justify-content-center align-items-center">

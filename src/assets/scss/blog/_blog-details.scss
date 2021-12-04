@@ -239,7 +239,7 @@ BLog Details Styles
         color: #0eb39c;
     }
 }
-.article-title, .author-glitched, .icon-glitch, .sherief-glitched, .subarthead{
+ .author-glitched, .icon-glitch, .sherief-glitched, .subarthead{
     flex: 1;
   line-height: .75;
   margin: auto;
@@ -377,3 +377,6 @@ BLog Details Styles
     }
 }
 
+.article-title{
+    color: $theme-color;
+}

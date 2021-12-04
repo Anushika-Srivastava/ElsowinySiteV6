@@ -162,42 +162,42 @@ export const options ={
           options: {
             images: [
               {
-                src: "https://particles.js.org/images/amongus_blue.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_blue.png",
                 width: 205,
                 height: 267
               },
               {
-                src: "https://particles.js.org/images/amongus_cyan.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_cyan.png",
                 width: 207,
                 height: 265
               },
               {
-                src: "https://particles.js.org/images/amongus_green.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_green.png",
                 width: 204,
                 height: 266
               },
               {
-                src: "https://particles.js.org/images/amongus_lime.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_lime.png",
                 width: 206,
                 height: 267
               },
               {
-                src: "https://raw.githubusercontent.com/elsowiny/Flappy/master/images/budgie.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_cyan.png",
                 width: 205,
                 height: 265
               },
               {
-                src: "https://particles.js.org/images/amongus_pink.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_green.png",
                 width: 205,
                 height: 265
               },
               {
-                src: "https://particles.js.org/images/amongus_red.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_red.png",
                 width: 204,
                 height: 267
               },
               {
-                src: "https://particles.js.org/images/amongus_white.png",
+                src: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/among/amongus_white.png",
                 width: 205,
                 height: 267
               }

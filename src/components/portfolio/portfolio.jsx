@@ -143,6 +143,7 @@ export default function Portfolio({displayCount}) {
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
         scroll="body"
+        className="portfolio-modal-elsowiny"
       >
             
 
@@ -213,7 +214,7 @@ export default function Portfolio({displayCount}) {
   
         </div>
   
-        <DialogActions>
+        <DialogActions className="dialog-close-elsowiny">
           <Button onClick={handleClose}>
               <span className="close-button-port">Close</span>
             

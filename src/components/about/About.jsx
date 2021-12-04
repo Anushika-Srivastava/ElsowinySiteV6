@@ -1,6 +1,6 @@
 import React from 'react'
 import config from "./config";
-import myBitmi from "./bitmi.png";
+import myBitmi from "./advent.png";
 import HomeTabs from '../tabs/Tabs';
 export default function About() {
     let title = config.title, description = config.description;

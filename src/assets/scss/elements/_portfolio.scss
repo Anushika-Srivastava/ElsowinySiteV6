@@ -1055,13 +1055,41 @@ Portfolio Style Three
 
 }
 
-.css-ouds40-MuiGrid-root{
-    border-bottom: 2px solid black !important;
-   
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollBody.MuiDialog-paperWidthMd{
+    background-color: rgba(3, 194, 168, 0.8) !important;
 }
-.css-hlj6pa-MuiDialogActions-root {
-    border-top: 2px solid black;
+
+
+
+
+
+//convert
+.portfolio-modal-elsowiny{
+    //background-color: red;
+    div > .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12:first-child{
+        background-color: rgba(0, 109, 94, 0.8);
+        
+        font-size: 30px;
+        font-weight: bold;
+        color: white !important;
+        padding-top: 33px !important;
+        padding-bottom: 23px !important;
+       
+    }
+    .dialog-close-elsowiny{
+        background-color: rgba(0, 109, 94, 0.8);
+        font-size: 30px;
+        font-weight: bold;
+        color: white !important;
+        padding-top: 33px !important;
+        padding-bottom: 23px !important;
+    }
+
+
 }
+
+
+
 
 
 .close-button-port{
