@@ -4,14 +4,10 @@ import projectConfig from "./config";
 import Dialog from '@mui/material/Dialog';
 import { useTheme } from '@mui/material/styles';
 import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Grid from '@mui/material/Grid';
 
-import Paper from '@mui/material/Paper';
 
 let bannerImage = "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/oss.png";
 
