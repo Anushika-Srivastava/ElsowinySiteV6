@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 import Particles from "../particles/Particles";
 import Helmet from "../../components/common/Helmet";
 
-const fetchUrl = 'https://wiszird.com/wp-json/wp/v2/posts?_embed';
-const blogImgUrl = 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/art.png';
+const fetchUrl = 'https://wiszird.com/wp-json/wp/v2/posts?categories=45&_embed';
+const blogImgUrl = 'https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/Article.png';
 export default function Blog2(){
     
     const [posts, setPosts] = useState([]);
