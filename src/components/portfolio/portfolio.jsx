@@ -16,7 +16,7 @@ let projects = projectConfig;
 let styevariation = "text-center mt--40";
 let column = "col-lg-4 col-md-6 col-sm-6 col-12";
 
-
+//stuff
 
 export default function Portfolio({displayCount}) {
     projects = projects?.slice(0, displayCount);

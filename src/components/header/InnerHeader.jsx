@@ -74,6 +74,7 @@ export default function InnerHeader() {
                                 <li><a href="/#portfolio">Portfolio</a></li>
                                 <li><a href="/#contact">Contact</a></li>
                                 <li><a href="/articles">Articles</a></li>
+                                <li><a href="/research">Research</a></li>
                             </Scrollspy>
                         </nav>
                     </div>

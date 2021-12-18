@@ -5,6 +5,7 @@ import './App.css';
 import Blog from "./components/blog/Blog";
 import BlogDetails from "./components/blog/BlogDetails";
 import Error404 from './pages/Error404';
+import Research from './components/research/Research';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <BrowserRouter basename={'/'} element={<HomePage />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/research" element={<Research />} />
         <Route path="/articles" element={<Blog />} />
         <Route path="/articles/:blogSlug" element={<BlogDetails />} />
         <Route path="/404" element={<Error404 />} />

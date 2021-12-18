@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import logo from "./elsowiz.png"
 import Scrollspy from 'react-scrollspy'
-import { Link } from 'react-router-dom';
 import {FaTwitter ,FaInstagram  , FaLinkedinIn } from "react-icons/fa";
 import { FiX , FiMenu, FiGithub} from "react-icons/fi";
 
@@ -74,6 +73,7 @@ export default function Header() {
                                 <li><a href="#portfolio">Portfolio</a></li>
                                 <li><a href="#contact">Contact</a></li>
                                 <li><a href="/articles">Articles</a></li>
+                                <li><a href="/research">Research</a></li>
                             </Scrollspy>
                         </nav>
                     </div>
