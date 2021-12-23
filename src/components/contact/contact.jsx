@@ -30,9 +30,7 @@ let color = "#FFFF00";
 export default function Contact(){
  const [submitted, setSubmitted] = useState(false);
  const [submitting, setSubmitting] = useState(false);
- const [recaptchaVerified, setRecaptchaVerified] = useState(false);
  const [errorMsg, setError] = useState(false);
- const [errorMessage, setErrorMessage] = useState(false);
 
  const [loading, setLoading] = useState(false);
  const [personsName, setPersonsName] = useState("");
@@ -79,7 +77,6 @@ export default function Contact(){
              }
          }
          let bodyData = {token: recaptchaToken};
-            //await axios.post(url, bodyData)
             return await axios.post(url, bodyData).then(res => {
                 return res.data;
             }).catch(err => {
@@ -93,7 +90,6 @@ export default function Contact(){
 
 
     const submitData = async(data) => {
-        console.log(data);
         setLoading(true);
         let bodyData = {
             name: data.name,

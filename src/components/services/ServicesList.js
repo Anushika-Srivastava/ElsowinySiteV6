@@ -1,5 +1,3 @@
-
-import { FiCast , FiLayers , FiUsers , FiMonitor } from "react-icons/fi";
 import {GrAppleAppStore, GrReactjs} from "react-icons/gr";
 import {BsTerminal} from "react-icons/bs";
 import {GiTeacher} from "react-icons/gi";
@@ -30,4 +28,4 @@ var ElsowinyServiceList = [
 ]
 
 
-export default {ElsowinyServiceList}
+export default ElsowinyServiceList;

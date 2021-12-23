@@ -1,7 +1,6 @@
 import React from 'react'
-import ServicesList from './ServicesList';
+import services from './ServicesList';
 
-const services = ServicesList.ElsowinyServiceList;
 
 export default function Services() {
     let title = 'Services',

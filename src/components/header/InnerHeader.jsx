@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
 import logo from "./elsowiz.png"
 import Scrollspy from 'react-scrollspy'
-import { Link } from 'react-router-dom';
 import {FaTwitter ,FaInstagram  , FaLinkedinIn } from "react-icons/fa";
 import { FiX , FiMenu, FiGithub} from "react-icons/fi";
 

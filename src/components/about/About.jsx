@@ -3,7 +3,7 @@ import config from "./config";
 import myBitmi from "./reefsanta.png";
 import HomeTabs from '../tabs/Tabs';
 export default function About() {
-    let title = config.title, description = config.description;
+    let title = config.title, description = config.description, subtitle = config.subtitle;
 
 
     return (
@@ -24,11 +24,9 @@ export default function About() {
                                  <div className="section-title">
                                      <a href="/about"><h2 className="title">{title}</h2></a>
                                      <p className="description">
-                                                Software developer and computer scientist.
+                                                {subtitle}
                                                 <br/>
-                                                    I am currently pursuing a master's degree in computer science from Columbus State University.
-                                                    This site will be updated periodically and contain some of my many projects.
-                                                More of my projects and the accompanying code can be found on my github page.
+                                                {description}
                                      </p>
                                  </div>
                                  <div className="row mt--30">

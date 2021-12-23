@@ -20,7 +20,6 @@ const BlogDetails = ({match,  data}) => {
 
     const fetchUrl = `https://wiszird.com/wp-json/wp/v2/posts?slug=${blogSlug}`;
     const [postFromSlug, setPostFromSlug] = useState({});
-    const [cleanedTitle, setCleanedTitle] = useState('');
     const [convertedDate, setConvertedDate] = useState('');
 
     const [pageTitle, setPageTitle] = useState('');
@@ -49,7 +48,6 @@ const BlogDetails = ({match,  data}) => {
             let cleanTitle = titleStrip(postData[0].title.rendered);
             let cleanDate = dateConverter(postData[0].date);
             setConvertedDate(cleanDate);
-            setCleanedTitle(cleanTitle);
             setPageTitle(cleanTitle + " - Sherief Elsowiny");
         };
         getPostBySlug();

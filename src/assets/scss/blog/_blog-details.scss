@@ -227,13 +227,13 @@ BLog Details Styles
         color: #ffffff;
     }
     *{
-        color: #ffffff;
+        color: $theme-color;
     }
     strong, b, h1, h2, h3, h4, h5, h6 {
         color: $theme-color;
     }
     a{
-        color: navajowhite;
+        color: #ff0000;
     }
     pre, code{
         color: #0eb39c;

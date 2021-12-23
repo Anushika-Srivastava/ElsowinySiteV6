@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet, HelmetProvider, HelmetData } from 'react-helmet-async';
+import { Helmet, HelmetData } from 'react-helmet-async';
 
 const helmetData = new HelmetData({});
 

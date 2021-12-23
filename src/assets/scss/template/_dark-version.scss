@@ -128,13 +128,6 @@ $bblue: '#58E2FF';
         color: #ffffff;
         border-color: $theme-color;
     }
-    .elsowinyBG {
-        background-color: #101010;
-        background-image: url("../../images/bg/elsowinybg.png") !important;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
     .backto-top>div {
         background-color: #000;
     }
@@ -206,58 +199,8 @@ $bblue: '#58E2FF';
         margin-top:  8%;
     }
 
-    .portfolio .thumbnail.ios{
-        background-image: url("../../images/about/ios.jpg");
-    }  
-    .portfolio .thumbnail.python{
-        background-image: url("../../images/about/python.jpg");
-    }
-    .portfolio .thumbnail.java{
-        background-image: url("../../images/about/java.jpg");
-    }
-
-    .portfolio .thumbnail.webdev{
-        background-image: url("../../images/about/webdev.jpg");
-    }
-    .portfolio .thumbnail.softdev{
-        background-image: url("../../images/about/SoftwareDev.jpg");
-    }
-    .portfolio .thumbnail.datasci{
-        background-image: url("../../images/about/Datascience.jpg");
-    }
-    .portfolio .thumbnail.datasci2{
-        background-image: url("../../images/portfolio/robo.jpg");
-    }
-    .portfolio .thumbnail.development{
-        background-image: url("../../images/about/development.jpg");
-    }
-    .portfolio .thumbnail.development2{
-        background-image: url("../../images/about/development2.jpg");
-    }
-    .portfolio .thumbnail.development3{
-        background-image: url("../../images/about/development3.jpg");
-    }
-
-    .portfolio .thumbnail.digi{
-        background-image: url("../../images/portfolio/digi.jpg");
-    }
-    .portfolio .thumbnail.digi2{
-        background-image: url("../../images/portfolio/digi2.jpg");
-    }
-    .portfolio .thumbnail.digi3{
-        background-image: url("../../images/portfolio/digi3.jpg");
-    }
-    .portfolio .thumbnail.digi4{
-        background-image: url("../../images/portfolio/digi4.jpg");
-    }
-
-
     .elsowinyservices {
         background: #191919;
-    }
-    .elsowinyservicebox{
-        
-        background-color: #810000!important;
     }
     .service.service__style--2 .iconelsowiny{
         color: black!important;
@@ -275,7 +218,6 @@ $bblue: '#58E2FF';
 
 
 .elsowinyBlog{
-    //color:#810000 !important;
     font-size: 16px;
     padding-bottom: 70px;
 }
@@ -323,16 +265,6 @@ input:disabled{
     color: $theme-color !important;
 }
 
-/*
-.social-share li a > svg{
-    color: $theme-color !important;
-
-    &:hover{
-        color: white !important;
-    }
-}
-
-*/
 *{
     
     cursor: url('https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amn/frame_0_delay-0.1s.gif'), auto;
@@ -368,18 +300,4 @@ $frame_white4: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/
     100% {cursor: url($frame_white) 0 0, auto;}
 
 
-  }
-
-
-  .css-1jh78f5-MuiPaper-root-MuiDialog-paper, .css-1k2f74c-MuiPaper-root-MuiDialog-paper{
-    background-color: rgba(15, 255, 222, 0.45) !important;
-  }
-
-  .css-qfso29-MuiTypography-root-MuiDialogContentText-root{
-    color: white !important;
-    font-family: BioRhyme, sans-serif;
-  }
-  
-  .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
-      color: white !important;
   }

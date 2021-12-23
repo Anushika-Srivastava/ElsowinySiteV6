@@ -28,22 +28,13 @@ export default function Portfolio({displayCount}) {
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     function onProjectClick(project){
-        //display project details in dialog
-     //   console.log("clicked");
-      //  console.log(project);
         setSelectedProject(project);
         setOpen(true);
 
     }
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    }
     const handleClose = () => {
 
         setOpen(false);
-        //setSelectedProject(null);
-      //  console.log("closed");
     }
 
     useEffect(() => {

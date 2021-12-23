@@ -1,4 +1,4 @@
-import React,  {  useEffect, useState } from "react";
+import React from "react";
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../../components/header/InnerHeader";
